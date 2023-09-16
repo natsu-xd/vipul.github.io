@@ -1,0 +1,92 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/* Style for the container */
+.image-container {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Style for the image */
+.image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+/* Style for the image */
+.image img {
+    width: 100%;
+    height: 100%;
+    transition: transform 1s ease; /* Add smooth transition for zoom effect */
+}
+
+/* Style for the overlay */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transition: opacity 0.7s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/* Style for the overlay text */
+.overlay-text {
+    font-size: 18px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    text-align: center; /* Center the text */
+    transition-delay: 0.2s; /* Delay the text animation */
+}
+
+/* Hover effect */
+.image:hover img {
+    transform: scale(1.2); /* Zoom effect without changing image size */
+}
+
+/* Show overlay and animate text on hover */
+.image:hover .overlay {
+    opacity: 1;
+}
+
+.image:hover .overlay .overlay-text {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --------------------------------------------------------
+PROJECTS PAGE 
+---------------------------------------------------------*/
+/* Style for the gallery container */
+
+.btn {
+    background-color: #fff;
+}
+.filter-buttons .btn.active {
+    background-color: #000; /* Change to your desired active button background color */
+    color: #fff; /* Change to your desired active button text color */
+}
+
+/* Initial style for all gallery items */
+.project {
+    opacity: 1;
+    transform: scale(1);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Hidden style for items */
+.project.hidden {
+    opacity: 0;
+    transform: scale(0.5);
+}
+
