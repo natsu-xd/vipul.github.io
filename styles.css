@@ -1,18 +1,13 @@
 body {
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* This ensures the body takes at least the full height of the viewport */
-}
-
-.footer {
-    margin-top: auto; /* Push the footer to the bottom */
+    min-height: 100vh;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 footer {
     background-color: rgb(14, 14, 14);
+    margin-top: auto;
 }
 /* -----------NAV ----------------- */
 .navbar-nav .nav-link {
@@ -129,7 +124,15 @@ PROJECTS PAGE
     opacity: 1;
     display: block;
 }
-  
+ 
+#btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    color: black;
+}
+
 @keyframes slideIn {
     from {
         opacity: 0;
